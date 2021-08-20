@@ -24,8 +24,8 @@ const init = async (options?: Options) => {
   const argv = require('minimist')(process.argv.slice(2))
   const cwd = process.cwd()
   const templateMap: TemplateMap = {
-    'mini-vue3': "https://github.com/singleManFan/mini-vue3",
-    "v3app": "https://github.com/singleManFan/v3app"
+    'mini-vue3': 'https://github.com/singleManFan/mini-vue3',
+    v3app: 'https://github.com/singleManFan/v3app'
   }
 
   if (!argv._[0]) {
@@ -42,7 +42,7 @@ const init = async (options?: Options) => {
     return
   }
 
-  //npm init fanfan my-app -template mini-vue3
+  // npm init fanfan my-app -template mini-vue3
   let template = options?.template ?? argv.template
   if (!template) {
     const answers = await prompts({
@@ -51,7 +51,7 @@ const init = async (options?: Options) => {
       message: 'Select a template:',
       choices: [
         { title: '✨ mini-vue3', value: 'mini-vue3' },
-        { title: '✨ study-vue3', value: 'v3app' },
+        { title: '✨ study-vue3', value: 'v3app' }
       ]
     }, {
       onCancel: () => {
