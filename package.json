@@ -14,9 +14,14 @@
   "bin": {
     "create-fanfan": "bin/index.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/singleManFan/create-fanfan.git"
+  },
   "keywords": [
     "cli"
   ],
+  "homepage": "https://github.com/singleManFan/create-fanfan#readme",
   "author": "fanfan",
   "license": "MIT",
   "devDependencies": {
