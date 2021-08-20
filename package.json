@@ -1,0 +1,40 @@
+{
+  "name": "create-fanfan",
+  "version": "1.0.0",
+  "description": "Create fanfn App",
+  "main": "./bin/init.js",
+  "scripts": {
+    "dev": "cross-env tsc -w -p ./tsconfig.json",
+    "build": "cross-env tsc -p ./tsconfig.json --inlineSourceMap false",
+    "lint": "cross-env NODE_OPTIONS=--max_old_space_size=4096 eslint . --ext .js,.ts --cache",
+    "lint:fix": "cross-env NODE_OPTIONS=--max_old_space_size=4096 eslint . --ext .js,.ts --cache --fix",
+    "test": "cross-env jest --coverage --verbose && codecov",
+    "prepare": "husky install"
+  },
+  "bin": {
+    "create-fanfan": "bin/index.js"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "fanfan",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "@types/node": "^16.6.2",
+    "@types/shelljs": "^0.8.9",
+    "codecov": "^3.8.3",
+    "cross-env": "^7.0.3",
+    "eslint-config-standard-react-ts": "^1.0.10",
+    "husky": "^7.0.1",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "dclone": "^1.4.2",
+    "minimist": "^1.2.5",
+    "prompts": "^2.4.1",
+    "shelljs": "^0.8.4"
+  }
+}
